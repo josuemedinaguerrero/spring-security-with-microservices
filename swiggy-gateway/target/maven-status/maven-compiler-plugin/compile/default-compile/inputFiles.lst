@@ -1,0 +1,5 @@
+/home/josue/Desktop/PROJECTS/SPRING/Microservices Security Using JWT Spring Cloud Gateway JavaTechie/swiggy-gateway/src/main/java/com/javatechie/filter/RouteValidator.java
+/home/josue/Desktop/PROJECTS/SPRING/Microservices Security Using JWT Spring Cloud Gateway JavaTechie/swiggy-gateway/src/main/java/com/javatechie/config/AppConfig.java
+/home/josue/Desktop/PROJECTS/SPRING/Microservices Security Using JWT Spring Cloud Gateway JavaTechie/swiggy-gateway/src/main/java/com/javatechie/util/JwtUtil.java
+/home/josue/Desktop/PROJECTS/SPRING/Microservices Security Using JWT Spring Cloud Gateway JavaTechie/swiggy-gateway/src/main/java/com/javatechie/SwiggyGatewayApplication.java
+/home/josue/Desktop/PROJECTS/SPRING/Microservices Security Using JWT Spring Cloud Gateway JavaTechie/swiggy-gateway/src/main/java/com/javatechie/filter/AuthenticationFilter.java
