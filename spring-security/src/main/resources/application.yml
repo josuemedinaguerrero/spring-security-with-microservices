@@ -1,9 +1,9 @@
 server:
-  port: 8082
+  port: 9898
 
 spring:
   application:
-    name: RESTAURANT-SERVICE
+    name: SPRING-SECURITY
 
 eureka:
   client:
