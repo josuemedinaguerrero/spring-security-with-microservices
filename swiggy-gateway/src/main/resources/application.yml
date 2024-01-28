@@ -16,10 +16,10 @@ spring:
           # filters:
           #   - AuthenticationFilter
 
-        # - id: identity-service
-        #   uri: lb://IDENTITY-SERVICE
-        #   predicates:
-        #     - Path=/auth/**
+        - id: spring-security
+          uri: lb://SPRING-SECURITY
+          predicates:
+            - Path=/auth/**
 
   application:
     name: SWIGGY-GATEWAY
