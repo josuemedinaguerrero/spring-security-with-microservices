@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
+// import org.springframework.web.client.RestTemplate;
 
 @Component
 public class AuthenticationFilter extends AbstractGatewayFilterFactory<AuthenticationFilter.Config> {
@@ -32,19 +32,16 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
           throw  new RuntimeException("missing authorization header");
         }
 
-        String authHeader = exchange.getRequest().getHeaders().get(HttpHeaders.AUTHORIZATION).get(0);
+        String authHeader = exchange.getRequest().getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
+        // String authHeader = exchange.getRequest().getHeaders().get(HttpHeaders.AUTHORIZATION).get(0);
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
           authHeader = authHeader.substring(7);
         }
 
         try {
-          System.out.println("AUTH: " + authHeader);
           // restTemplate.getForObject("http://SPRING-SECURITY/auth/validate?token=" + authHeader, String.class);
           jwtUtil.validateToken(authHeader);
         } catch (Exception e) {
-          System.out.println("Invalid access...");
-          System.out.println(e);
-          System.out.println("ALAAAAAAAAAA");
           throw new RuntimeException("Unauthorized access to application");
         }
 
