@@ -6,15 +6,15 @@ spring:
           uri: lb://SWIGGY-APP
           predicates:
             - Path=/swiggy/**
-          # filters:
-          #   - AuthenticationFilter
+          filters:
+            - AuthenticationFilter
 
         - id: restaurant-service
           uri: lb://RESTAURANT-SERVICE
           predicates:
             - Path=/restaurant/**
-          # filters:
-          #   - AuthenticationFilter
+          filters:
+            - AuthenticationFilter
 
         - id: spring-security
           uri: lb://SPRING-SECURITY
